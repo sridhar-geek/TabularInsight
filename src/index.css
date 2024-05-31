@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-body;
+  }
+  /* Header Styles */
+  .extraBtn {
+    @apply py-1 text-center cursor-pointer;
+  }
+  .effect {
+    @apply h-1 w-full bg-primary rounded-full scale-x-0 transform origin-left hover:scale-x-100 transition-transform duration-300;
+  }
+ /* Heading Styles */
+  .heading{
+    @apply font-Montserrat font-extrabold text-xl md:text-2xl
+  }
+  /* Statics Styles */
+  .statics_container{
+    @apply flex justify-between items-center gap-3 mb-3;
+  }
+  /* Footer Styles */
+  .footer_items {
+    @apply mb-3 font-medium hover:scale-105 select-none;
+  }
+}
