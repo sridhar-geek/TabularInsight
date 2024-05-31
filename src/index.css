@@ -14,6 +14,21 @@
   .effect {
     @apply h-1 w-full bg-primary rounded-full scale-x-0 transform origin-left hover:scale-x-100 transition-transform duration-300;
   }
+  .errorClass{
+    @apply font-Poppins text-xl text-center
+  }
+  .loadingClass{
+    @apply font-Poppins text-3xl text-center
+  }
+  /* Table Styles */
+  .tablerow > * {
+    @apply  p-4 m-4 
+  }
+
+  .section{
+    @apply flex flex-col justify-center items-center gap-4 my-10
+  }
+
  /* Heading Styles */
   .heading{
     @apply font-Montserrat font-extrabold text-xl md:text-2xl

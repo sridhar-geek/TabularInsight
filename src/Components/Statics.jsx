@@ -1,20 +1,21 @@
+import PropTypes from "prop-types";
 // Imports from another files
 import { useGetStatics } from "../React Query/CustomHook";
 
-const Statics = () => {
-  const sMonth = "07";
+const Statics = ({ sMonth }) => {
   const { data, isLoading, isError, error } = useGetStatics(sMonth);
 
-  if (isError) return <h1 className="font-Tourney text-2xl">{error}</h1>;
   return (
-    <article className="flex flex-col justify-center items-center gap-4 my-10">
+    <article className="section">
       {/* heading */}
-      <h3 className="heading">Statics of the January Month</h3>
-      {/* form elements */}
+      <h3 className="heading">Statics of January Month</h3>
+      {/* container */}
       <section className="bg-white rounded-3xl shadow-md shadow-gray-300 px-6 py-10  w-[60%] min-w-[350px] max-w-[500px]">
         {/* Varaibles */}
         {isLoading ? (
-          <h1 className="font-Tourney text-3xl">Loading...</h1>
+          <h1 className="loadingClass">Loading...</h1>
+        ) : isError ? (
+          <h1 className="errorClass">{error.message}</h1>
         ) : (
           <>
             <div className="statics_container">
@@ -34,6 +35,11 @@ const Statics = () => {
       </section>
     </article>
   );
+};
+
+// validating PropTypes
+Statics.propTypes = {
+  sMonth: PropTypes.string.isRequired,
 };
 
 export default Statics;

@@ -14,7 +14,7 @@ const Header = () => {
                   alt="logo"
                   className="cursor-pointer w-24 h-16 rounded-full"
                 />
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-Tourney  text-primary font-extrabold select-none">
+                <h3 className="hidden sm:block sm:text-2xl lg:text-3xl font-Tourney  text-primary font-extrabold select-none">
                   TabularInsight
                 </h3>
               </div>
